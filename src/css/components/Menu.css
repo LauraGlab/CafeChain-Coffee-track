@@ -1,0 +1,57 @@
+.menu {
+  align-items: center;
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  width: 100vw;
+  z-index: 100;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+.menuHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.closeBtn {
+  background-color: transparent;
+  border: none;
+  color: var(--brown);
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+}
+
+.logoSection .logo {
+  height: 40px;
+  left: 3rem;
+  top: 1rem;
+}
+
+.menuItems {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.menuItems button {
+  background: none;
+  border: none;
+  color: var(--brown);
+  cursor: pointer;
+  font-size: 2.2rem;
+  letter-spacing: -0.05rem;
+  margin-bottom: 1rem;
+}

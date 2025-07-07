@@ -1,0 +1,148 @@
+header {
+  background-color: #ffffff8b;
+  display: flex;
+  flex-direction: row;
+  height: 2.9375rem;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  position: fixed;
+  width: 100vw;
+  z-index: 50;
+}
+
+.logo {
+  height: 2.9375rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 2.9375rem;
+}
+
+.mobileFollowBtn, .mobileMenuBtn {
+  background: none;
+  border: none;
+  font-size: inherit;
+  outline: none;
+  position: absolute;
+  text-transform: uppercase;
+  top: 0.75rem;
+}
+
+.mobileFollowBtn {
+  right: 1rem;
+}
+
+.mobileMenuBtn {
+  left: 1rem;
+}
+
+.desktopHeader {
+  display: none;
+}
+
+@media (min-width: 1025px) {
+  header {
+    height: 3.8rem;
+  }
+
+  .mobileHeader {
+    display: none;
+  }
+    
+  .desktopHeader {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+    z-index: 100;
+  }
+
+  .desktopHeader .ctaBtn {
+    background-color: var(--light-brown);
+    border: none;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    height: 4.2rem;
+    padding: 10px 20px;
+    position: absolute;
+    right: 3rem;
+    top: 0;
+    transition: 0.5s;
+  }
+
+  .desktopHeader .ctaBtn a {
+    color: var(--white);
+  }
+
+  .desktopHeader .ctaBtn:hover {
+    background-color: var(--brown);
+    transform: scale(1.1);
+  }
+
+  .desktopHeader .desktopLogo {
+    width: 2.8rem;
+  }
+
+  .desktopHeader .desktopLogoSection {
+    align-items: center;
+    display: flex;
+    gap: 15px;
+  }
+
+  .desktopHeader .menu {
+    display: flex;
+    gap: 30px;
+  }
+
+  .desktopHeader button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0 2rem;
+  }
+
+  .desktopHeader .desktopMenuBtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 16px;
+  }
+
+  .desktopHeader .desktopMenuText {
+    color: var(--brown);
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .desktopHeader .desktopMenuText::after {
+    background-color: currentColor;
+    bottom: 0;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    transition: width 0.3s ease-in-out;
+    width: 0;
+  }
+
+  .desktopHeader .desktopMenuBtn:hover .desktopMenuText::after {
+    width: 100%;
+  }
+
+  .desktopLogoText {
+    color: var(--brown);
+    font-family: "Fraunces", serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 65%;
+    margin-bottom: 0.2rem;
+    text-transform: lowercase;
+    }
+}

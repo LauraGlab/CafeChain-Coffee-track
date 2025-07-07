@@ -1,0 +1,184 @@
+.instructionSection::before {
+  background-image: url(./../../../assets/decorations/decoHome1.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  content: '';
+  height: 100px;
+  left: 0;
+  position: absolute;
+  top: -90px;
+  width: 100%;
+}
+
+.instructionSection {
+  align-items: center;
+  background-color: var(--brown);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 90px;
+  padding-bottom: 3rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  z-index: 9;
+}
+
+.instructionSection::after {
+  background-image: url(./../../../assets/decorations/decoHome2.png);
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  bottom: -690px;
+  content: '';
+  height: 700px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+
+.instructionTitle {
+  font-size: 3.2rem;
+  letter-spacing: -.07rem;
+  margin: 0 auto;
+  text-align: center;
+  width: 21.4375rem;
+  z-index: 99;
+}
+
+.instructionCard {
+  background-color: #fff;
+  border-radius: 10px;
+  box-sizing: content-box;
+  box-shadow: -3px 4px 14px #ddc6ca66;
+  height: 21.875rem;
+  margin-bottom: 1.5rem;
+  margin-top: 2.75rem;
+  min-height: 100%;
+  padding-bottom: .25rem;
+  padding-top: 1.5rem;
+  position: relative;
+  width: 20.5rem;
+}
+
+.instructionCardContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.instructionStepTitle {
+  color: var(--brown);
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin: 0 auto;
+  text-align: center;
+  width: 17.5rem;
+}
+
+.stepNumber {
+  color: var(--brown);
+  font-size: 2.3rem;
+}
+
+.instructionStepDescription {
+  color: var(--light-brown);
+  font-size: .7rem;
+  font-weight: 600;
+  line-height: 95%;
+  margin: 0 auto;
+  min-height: 2.0625rem;
+  width: 16.5625rem;
+}
+
+.instructionImgContainer {
+  background-color: var(--light-brown);
+  border-radius: .1875rem;
+  bottom: 0;
+  height: 10.5rem;
+  margin-left: .25rem;
+  margin-right: .25rem;
+  margin-top: .5rem;
+  position: relative;
+}
+
+.instructionImage {
+  border-radius: 8px;
+  height: 11.5rem;
+  left: 50%;
+  max-width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: -13%;
+  transform: translate(-50%);
+  width: 14.375rem;
+}
+
+.desktopInstructionSteps {
+  display: none;
+}
+
+.instructionBtns {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.instructionBtn {
+  background: none;
+  border: none;
+  border-radius: 8px;
+  color: var(--dark-brown);
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0.75rem 1rem;
+}
+
+@media (min-width: 1025px) {
+  .instructionSection::before {
+    top: -95px;
+  }
+
+  .instructionSection {
+    margin-bottom: 100px;
+    margin-top: 100px;
+    padding: 3.5rem 0 2rem;
+  }
+
+  .mobileInstructionSteps {
+    display: none;
+  }
+
+  .instructionTitle {
+    font-size: 8rem;
+    letter-spacing: -.2325rem;
+    line-height: 78%;
+    width: 58rem;
+  }
+
+  .desktopInstructionSteps {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    margin: 2rem auto 0;
+    width: 100%;
+  }
+
+  .instructionCard {
+    width: 19rem;
+  }
+
+  .instructionStepTitle {
+    height: 4rem;
+  }
+
+  .instructionBtn {
+    display: none;
+  }
+}

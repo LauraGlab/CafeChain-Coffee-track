@@ -1,0 +1,80 @@
+.loading{
+    align-items: center;
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top:0;
+    width: 100vw;
+    z-index: 99;
+}
+.cupStack {
+    height: 60vh;
+    margin: 0 auto;
+    position: relative;
+    width: 230px;
+}
+
+.traceStep {
+    animation: stackCups 1s ease-out forwards;
+    height: 15vh;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, 60%);
+    width: 26.5vh; 
+}
+
+#zero {
+    --target-top: 55vh; 
+}
+
+#one {
+    --target-top: 48vh;
+    animation-delay: 0.1s; 
+}
+
+#two {
+    --target-top: 42vh;
+    animation-delay: 0.3s;
+}
+
+#three {
+    --target-top: 36vh;
+    animation-delay: 0.5s;
+}
+
+#four {
+    --target-top: 30vh;
+    animation-delay: 0.7s;
+}
+
+#five {
+    --target-top: 24vh;
+    animation-delay: 0.9s;
+}
+
+#six {
+    --target-top: 18vh;
+    animation-delay: 1.1s;
+}
+
+#seven {
+    --target-top: 12vh;
+    animation-delay: 1.3s;
+}
+
+@keyframes stackCups {
+  from {
+    top: -150px;
+    opacity: 0;
+  }
+  to {
+    top: var(--target-top); 
+    opacity: 1; 
+  }
+}

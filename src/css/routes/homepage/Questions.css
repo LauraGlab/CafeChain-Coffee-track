@@ -1,0 +1,61 @@
+.questionsSection {
+  padding: 2rem;
+  text-align: center;
+}
+
+.questionsTitle {
+  font-size: 3.4rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.questionsContent {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.questionsText {
+  font-size: 1.3rem;
+  letter-spacing: -.05rem;
+}
+
+.questionsEmail {
+  cursor: pointer;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+}
+
+@media (min-width: 1025px) {
+  .questionsSection {
+    width: 100%;
+  }
+
+  .questionsTitle {
+    font-size: 10rem;
+    letter-spacing: -.295rem;
+    line-height: 78%;
+    margin: 0 auto;
+    width: 77.875rem;
+  }
+
+  .desktopQuestions {
+    column-gap: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    letter-spacing: -.0875rem;
+    line-height: 78%;
+    margin: 6rem auto 0;
+  }
+
+  .questionsText,
+  .questionsEmail {
+    font-size: 3rem;
+  }
+
+  .questionsEmail {
+    text-decoration: none;
+  }
+}

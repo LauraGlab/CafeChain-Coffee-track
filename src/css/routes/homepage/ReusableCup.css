@@ -1,0 +1,145 @@
+.reusableCupSection {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
+}
+
+.reusableCupTitle {
+  font-size: 2.7rem;
+  letter-spacing: -.11rem;
+  line-height: 80%;
+  margin: 0 auto;
+  padding-bottom: 1.5rem;
+  text-align: center;
+  width: 20rem;
+}
+
+.reusableCupText {
+  align-items: center;
+  bottom: -6.25rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  text-align: center;
+  width: 18.0625rem;
+}
+
+.reusableCupImg__section {
+  height: 20rem;
+  position: relative;
+  width: 30rem;
+}
+
+.reusableCupImg {
+  bottom: 1.5rem;
+  height: 17rem;
+  position: absolute;
+  right: -2rem;
+  width: 30rem;
+  z-index: 9;
+}
+
+.cupDeco {
+  fill: var(--black);
+}
+
+.cupFill {
+  fill: var(--beige);
+}
+
+.cupLid {
+  fill: #786d6d;
+}
+
+.reusableCupContent {
+  width: 100%;
+}
+
+.explanationText__section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.explanationText {
+  border: 2px solid var(--brown);
+  border-radius: 3rem;
+  margin: 0 auto 1rem;
+  padding: 1rem;
+  text-align: center;
+  width: 21rem;
+}
+
+#cupFill{
+    background-color: var(--beige);
+}
+
+#cup{
+    background-color: var(--brown);
+    color: var(--white);
+}
+
+#cupLid{
+    background-color: #786d6d;
+    color: var(--white);
+}
+
+#cupDeco{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+@media (min-width: 1025px) {
+  .reusableCupSection {
+    display: block;
+    margin-top: 60px;
+  }
+
+  .reusableCupTitle {
+    font-size: 8rem;
+    letter-spacing: -.2325rem;
+    line-height: 78%;
+    width: 58rem;
+  }
+
+  .reusableCupText {
+    font-size: 1.875rem;
+    letter-spacing: -.0375rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    width: 50rem;
+  }
+
+  .reusableCupDesktopWrapper {
+    display: grid;
+    font-size: 1.4rem;
+    grid-template-columns: 60% 40%;
+    letter-spacing: -.0375rem;
+    line-height: 100%;
+  }
+
+  .reusableCupContent {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .reusableCupImg__section {
+    height: 35rem;
+    order: 2;
+    position: relative;
+    width: 45rem;
+  }
+
+  .reusableCupImg {
+    height: 32rem;
+    right: 4rem;
+    width: 45rem;
+  }
+
+  .explanationText {
+    width: 35rem;
+  }
+}

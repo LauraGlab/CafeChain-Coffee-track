@@ -1,0 +1,82 @@
+.aboutPage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5.375rem 2.5rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+.aboutImg {
+  height: 8rem;
+  position: absolute;
+  width: 8rem;
+  z-index: -1;
+}
+
+#left {
+  left: -40px;
+}
+
+#right {
+  right: -60px;
+  top: 90px;
+}
+
+.aboutTitle {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 1.75rem;
+  text-align: center;
+  width: 100%;
+}
+
+.aboutText p {
+  margin-bottom: 1rem;
+}
+
+.aboutSubtitle {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.whatInfo {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+@media (min-width: 1025px) {
+  .aboutPage {
+    min-height: 90vh;
+    padding-bottom: 1.5rem;
+  }
+
+  .aboutImg {
+    height: 320px;
+    width: 320px;
+    z-index: -1;
+  }
+
+  .aboutTitle {
+    font-size: 6rem;
+    font-style: normal;
+    letter-spacing: -.2325rem;
+    line-height: 78%;
+    width: 700px;
+  }
+
+  .aboutText p {
+    margin: 0 auto;
+    width: 650px;
+  }
+
+  .whatInfo {
+    margin: 0 auto;
+    width: 650px;
+  }
+}

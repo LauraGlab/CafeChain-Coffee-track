@@ -1,0 +1,329 @@
+.batchInfoWrapper {
+    align-items: center;
+    background-color: var(--beige);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+    min-height: 100vh;
+    padding: 0 2.5rem 2rem;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.batchInfoWrapper::after {
+    background-image: url(./../../assets/decorations/decoBatch2.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    bottom: -290px;
+    content: '';
+    height: 300px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.batchInfoWrapper::before {
+    background-image: url(./../../assets/decorations/decoBatch1.svg);
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    content: '';
+    height: 700px;
+    left: 0;
+    position: absolute;
+    top: -5.5rem;
+    width: 100%;
+    z-index: -1;
+}
+
+.batchPage {
+    margin-top: 5.375rem;
+}
+
+.batchTitle {
+    font-size: 4.2rem;
+    margin: 0 auto;
+    text-align: center;
+    width: 21.4375rem;
+}
+
+.blockchainBtn,
+.pdfBtn {
+    background-color: var(--light-brown);
+    border: none;
+    border-radius: 2rem;
+    color: var(--beige);
+    line-height: 80%;
+    outline: none;
+    padding: 0.5rem 0;
+    transition: all .2s ease-in;
+    width: 8.25rem;
+}
+
+.blockchainBtn:hover,
+.pdfBtn:hover {
+    background-color: var(--brown);
+}
+
+.carouselBtn {
+    background-color: var(--brown);
+    border: none;
+    border-radius: 2rem;
+    color: var(--beige);
+    cursor: pointer;
+    font-size: 2rem;
+    height: 3rem;
+    outline: none;
+    width: 3rem;
+}
+
+.carouselControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -2rem;
+    padding: 0 1.5rem;
+}
+
+.carouselImage {
+    height: auto;
+    min-height: 20rem;
+    padding-top: 0.75rem;
+    width: 20rem;
+}
+
+.carouselStep {
+    background-color: var(--brown);
+    border: 2px solid var(--brown);
+    border-radius: 2rem;
+    color: var(--beige);
+    display: flex;
+    flex-direction: row;
+    line-height: 110%;
+    margin: 0.75rem auto 0;
+    padding: 0.75rem;
+    text-align: left;
+    width: 19rem;
+}
+
+.carouselStepIcon {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 3.25rem;
+    justify-content: center;
+    margin-right: 0.75rem;
+    width: 3.5rem;
+}
+
+.carouselStepInfo {
+    font-weight: 400;
+}
+
+.carouselStepInfoWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carouselStepSvg {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.carouselStepTitleDesktop {
+    display: none;
+}
+
+.carouselStepTitleMobile {
+    font-size: 2.5rem;
+    margin: 2.25rem 0 0.75rem;
+    width: 21.4375rem;
+}
+
+.errorContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 70vh;
+    padding-top: 3rem;
+}
+
+.errorImg {
+    margin-bottom: 1rem;
+    width: 14rem;
+}
+
+.errorText {
+    text-align: center;
+    width: 90%;
+}
+
+.pdf {
+    background-image: url(./../../assets/pdf.svg);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    left: -9999px;
+    min-height: 297mm;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 210mm;
+}
+
+.pdfBlockchainBtns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+}
+
+.pdfStage {
+    font-size: 8pt;
+    line-height: 105%;
+    margin-left: 10mm;
+    width: 90%;
+}
+
+.pdfStageTitle {
+    font-size: 12pt;
+    margin: 0.35rem 0 0.2rem;
+}
+
+.pdfTitle {
+    font-size: 65pt;
+    margin-bottom: 27mm;
+    margin-left: 10mm;
+    margin-top: 20mm;
+    text-align: left;
+}
+
+#details {
+    padding: 1rem;
+}
+
+#detailsInfo {
+    line-height: 95%;
+    padding-top: 0.35rem;
+}
+
+#detailsTitle {
+    font-size: 1.1rem;
+}
+
+#sustainability {
+    margin: 0 0.5rem;
+}
+
+@media (min-width: 1025px) {
+    .batchBr {
+        display: none !important;
+    }
+
+    .batchInfoWrapper {
+        justify-content: start;
+        margin-bottom: 12rem;
+        margin-top: 8.5rem;
+        min-height: auto;
+        padding-top: 3.25rem;
+    }
+
+    .batchInfoWrapper::before {
+        top: -22rem;
+    }
+
+    .batchPage {
+        margin-top: 8.5rem;
+    }
+
+    .batchTitle {
+        font-size: 9.5rem;
+        width: 65rem;
+    }
+
+    .carouselBtn {
+        font-size: 2.75rem;
+        height: 4rem;
+        transition: 0.5s;
+        width: 4rem;
+        z-index: 9;
+    }
+
+    .carouselBtn:hover {
+        background-color: var(--light-brown);
+    }
+
+    .carouselCard {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .carouselCardContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .carouselImage {
+        min-height: 35rem;
+        padding-top: 0.75rem;
+        width: 35rem;
+    }
+
+    .carouselStep {
+        font-size: 1.4rem;
+        line-height: 100%;
+        width: 80%;
+        word-spacing: -2.5px;
+    }
+
+    .carouselStepTitleDesktop {
+        display: block;
+        font-size: 4.4rem;
+        margin-bottom: 1rem;
+        margin-left: 11%;
+        text-align: left;
+    }
+
+    .carouselStepTitleMobile {
+        display: none;
+    }
+
+    .errorContainer {
+        min-height: 60vh;
+        padding-top: 5rem;
+    }
+
+    .errorImg {
+        width: 25rem;
+    }
+
+    .errorText {
+        width: 30%;
+    }
+
+    #detailsTitle {
+        font-size: 1.4rem;
+    }
+
+    .pdfBlockchainBtns {
+        margin: 0 auto;
+        padding: 2rem 0;
+        width: 80%;
+    }
+
+    .blockchainBtn,
+    .pdfBtn {
+        font-size: 1.8rem;
+        height: 3.85rem;
+        width: 18rem;
+    }
+}
