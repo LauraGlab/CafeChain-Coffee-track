@@ -1,0 +1,96 @@
+.instruction {
+  align-items: center;
+  background-color: var(--green-100);
+  color: var(--brown-600);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-sm);
+  margin-top: var(--space-sm);
+  padding: var(--space-section-gap) var(--space-md);
+  text-align: center;
+  width: 100%;
+}
+
+.instruction__mobile {
+  width: 100%;
+}
+
+.instruction__card {
+  background-color: var(--beige-100);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 var(--space-sm) rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  max-width: 90%;
+  width: 100%;
+}
+
+.instruction__card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding-bottom: var(--space-md);
+}
+
+.instruction__image {
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.instruction__step-title {
+  padding-top: var(--space-sm);
+}
+
+.instruction__step-description{
+  padding: 0 var(--space-md);
+}
+
+.instruction__buttons {
+  display: flex;
+  gap: var(--space-lg);
+  justify-content: center;
+  margin-top: var(--space-xl);
+}
+
+.instruction__btn {
+  background-color: var(--green-300);
+  border: none;
+  border-radius: 50%;
+  color: var(--beige-100);
+  cursor: pointer;
+  height: var(--space-2xl);
+  width: var(--space-2xl);
+}
+
+.instruction__cta {
+  height: var(--space-2xl);
+}
+
+.instruction__desktop {
+  display: none;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: var(--space-2xl);
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .instruction__desktop {
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+  }
+
+  .instruction__mobile {
+    display: none;
+  }
+
+  .instruction__card {
+    max-width: 100%;
+  }
+}

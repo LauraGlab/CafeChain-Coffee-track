@@ -1,0 +1,16 @@
+.batch-history {
+  background-color: var(--brown-200);
+}
+
+.batch-history__decorative-section{
+  background-color: var(--brown-200);
+  border-top-left-radius: var(--space-xl);
+  border-top-right-radius: var(--space-xl);
+  height: calc(2px + var(--space-xl));
+  margin-top: calc(-1 * var(--space-xl));
+  width: 100%;
+}
+
+.batch-history-stage__wrapper{
+  margin-bottom: var(--space-lg);
+}

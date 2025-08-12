@@ -1,0 +1,204 @@
+.qr {
+  align-items: center;
+  background: linear-gradient(135deg, var(--green-200), var(--green-300));
+  border-radius: var(--radius-xl);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  color: var(--beige-100);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  margin-bottom: calc(-1 * var(--space-xl));
+  margin-top: calc(-1 * var(--space-md));
+  padding: var(--space-xl) var(--space-lg);
+  position: relative;
+  text-align: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  z-index: var(--z-dropdown);
+}
+
+.qr:hover {
+  box-shadow: 0 14px 50px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.qr__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+
+.qr__description {
+  color: var(--beige-100);
+  font-size: var(--fs-md);
+  line-height: var(--lh-relaxed);
+  margin: 0 auto;
+  max-width: 600px;
+  opacity: 0.95;
+}
+
+.qr__image {
+  border-radius: var(--radius-md);
+  display: block;
+  height: auto;
+  max-width: 150px;
+  width: 100%;
+  z-index: 1;
+}
+
+.qr__image-wrapper {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-lg);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.05);
+  display: inline-block;
+  padding: var(--space-md);
+  transition: transform 0.3s ease;
+}
+
+.qr__image-wrapper:hover {
+  transform: scale(1.02);
+}
+
+.qr__scroll-indicator {
+  display: none;
+}
+
+.qr__subtitle {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  color: var(--white);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.08em;
+  padding: var(--space-xs) var(--space-sm2);
+  text-transform: uppercase;
+  width: max-content;
+}
+
+.qr__title {
+  color: var(--white);
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-vtight);
+}
+
+.qr__title-accent {
+  color: var(--orange-200);
+}
+
+.qr__wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  max-width: 1000px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .qr {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-lg) var(--space-2xl);
+  }
+
+  .qr__content {
+    align-items: flex-start;
+    flex: 1;
+    margin-top: 0;
+    max-width: 50%;
+    text-align: left;
+  }
+
+  .qr__description {
+    margin: 0;
+  }
+
+  .qr__image {
+    max-width: 100%;
+  }
+
+  .qr__image-wrapper {
+    aspect-ratio: 1/1;
+    height: 290px;
+    max-width: 290px;
+  }
+
+  .qr__wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xl);
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1024px) {
+  .qr {
+    padding: var(--space-xl) var(--space-3xl) var(--space-2xl);
+  }
+
+  .qr__description {
+    font-size: var(--fs-lg);
+  }
+
+  .qr__image-wrapper {
+    height: 360px;
+    max-width: 360px;
+    padding: var(--space-lg);
+  }
+
+  .qr__scroll-button {
+    background-color: rgba(128, 128, 128, 0.092);
+    border-radius: 50%;
+    color: var(--gray-100);
+    font-size: 16px;
+    font-weight: 900;
+    height: 100px;
+    width: 46px;
+  }
+
+  .qr__scroll-button-wrapper {
+    align-items: center;
+    background-color: var(--green-300);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    height: 65px;
+    padding: var(--space-sm);
+    width: 65px;
+  }
+
+  .qr__scroll-indicator {
+    align-items: center;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    top: -3rem;
+    transform: translate(-50%, -50%);
+    width: auto;
+  }
+
+  .qr__scroll-wrapper {
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    color: var(--white);
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: var(--z-toast);
+  }
+
+  .qr__subtitle {
+    font-size: var(--fs-lg);
+  }
+
+  .qr__title {
+    font-size: var(--fs-5xl);
+  }
+}
+

@@ -1,0 +1,101 @@
+.section-block--reverse {
+  direction: rtl;
+}
+
+.section-block--reverse > * {
+  direction: ltr;
+}
+
+.section-block__image-wrapper {
+  height: 100%;
+}
+
+.section-block__image-wrapper--decorated {
+  border-top-right-radius: var(--radius-xl);
+  margin-top: calc(-1 * var(--space-xl));
+}
+
+.section-block__image {
+  border-top-left-radius: var(--radius-xl);
+  border-top-right-radius: var(--radius-xl);
+  display: block;
+  height: 100%;
+  margin-top: calc(-1 * var(--space-xl));
+  object-fit: cover;
+  width: 100%;
+}
+
+.section-block__image--desktop {
+  display: none;
+}
+
+.section-block__text {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: var(--space-xl) 8% var(--space-2xl);
+}
+
+.section-block__text--decorated {
+  background-color: var(--white);
+  border-top-left-radius: var(--radius-xl);
+  border-top-right-radius: var(--radius-xl);
+  height: calc(100% * var(--space-xl));
+  margin-top: calc(-1 * var(--space-xl));
+  padding-top: var(--space-xl);
+}
+
+.text__highlighted{
+  color: var(--white);
+}
+
+.section-block__text-subtitle{
+  margin: var(--space-sm) 0;
+}
+
+/* background color */
+.bg-brown{
+  background-color: var(--brown-500);
+}
+
+.bg-green {
+  background-color: var(--green-300);
+}
+
+.bg-orange{
+  background-color: var(--orange-300);
+}
+
+@media (min-width: 768px) {
+  .section-block {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .section-block__image-wrapper {
+    height: 100%;
+  }
+
+  .section-block__image {
+    border-top-left-radius: unset;
+    border-top-right-radius: unset;
+    height: 100%;
+    margin-top: 0;
+  }
+
+  .section-block__image--desktop {
+    border-top-right-radius: var(--radius-xl);
+    display: block;
+    height: calc(var(--space-xl) + 100%);
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .section-block__text--decorated {
+    border-top-left-radius: var(--radius-xl);
+    border-top-right-radius: 0;
+    margin-top: calc(-1 * var(--space-xl));
+  }
+}

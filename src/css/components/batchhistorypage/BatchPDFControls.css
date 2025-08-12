@@ -1,0 +1,64 @@
+.batch-history-pdf__buttons {
+  bottom: var(--space-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  position: fixed;
+  right: var(--space-sm);
+  z-index: var(--z-modal);
+}
+
+.pdf-buttons__generate-btn,
+.pdf-buttons__other-btn {
+  align-items: center;
+  background-color: var(--brown-400);
+  border: none;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.27) 0px 1px 10px 0px;
+  cursor: pointer;
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  width: 56px;
+}
+
+.pdf-buttons__generate-btn {
+  background-color: var(--brown-400);
+}
+
+.pdf-buttons__generate-btn:hover {
+  background-color: var(--brown-200);
+}
+
+.pdf-buttons__other-btn {
+  background-color: var(--brown-300);
+}
+
+.pdf-buttons__other-btn:hover {
+  background-color: var(--brown-200);
+}
+
+.pdf-buttons__generate-btn a,
+.pdf-buttons__other-btn a {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  width: 100%;
+}
+
+#pdfContent {
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 297mm;
+  justify-content: flex-start;
+  padding-bottom: 40mm;
+  padding-left: 15mm;
+  padding-right: 15mm;
+  padding-top: 50mm;
+  width: 210mm;
+}

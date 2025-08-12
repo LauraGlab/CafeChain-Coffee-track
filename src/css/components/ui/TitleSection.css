@@ -1,0 +1,16 @@
+.title-section{
+    align-items: center;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5% var(--space-xl);
+    width: 100%;
+}
+
+.title-section__title{
+    color: var(--white);
+    padding: var(--space-xl) 0;
+}

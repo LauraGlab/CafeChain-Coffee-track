@@ -1,19 +1,24 @@
 import { useState, useEffect } from "react";
-import { HashRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Web3 from "web3";
-import About from "./routes/About.jsx";
-import BatchDetails from "./routes/BatchDetails.jsx";
-import Contact from "./routes/Contact.jsx";
-import Footer from "./components/Footer.jsx";
-import Header from "./components/Header.jsx";
-import Home from "./routes/homepage/Home.jsx";
-import Loading from "./routes/Loading.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import BatchHistoryPage from "./pages/BatchHistoryPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
+import BlockchainPage from "./pages/BlockchainPage.jsx";
+import Footer from "./components/layout/Footer.jsx";
+import Header from "./components/layout/Header.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import Loading from "./pages/LoadingScreen.jsx";
 import ScrollToTop from "./components/ScrollToTop.jsx";
-import TraceabilityChain from "./routes/TraceabilityChain.jsx";
-import "./css/App.css";
 import contractData from "./../artifacts/contracts/CoffeeTrack.sol/CoffeeTrack.json";
 import contractAddress from "./contractAddress.js";
 const contractABI = contractData.abi;
+import "./css/App.css";
 
 export default function App() {
   const [web3, setWeb3] = useState(null);
@@ -25,13 +30,14 @@ export default function App() {
   useEffect(() => {
     setLoading(true);
     setLoadingComplete(false);
-
-    const timer = setTimeout(() => {
+    const loadPage = async () => {
+     
+      await new Promise((resolve) => setTimeout(resolve, 1500)); 
       setLoading(false);
-      setTimeout(() => setLoadingComplete(true), 500);
-    }, 3000);
+      setLoadingComplete(true);
+    };
 
-    return () => clearTimeout(timer);
+    loadPage();
   }, [location.pathname]);
 
   useEffect(() => {
@@ -80,23 +86,31 @@ export default function App() {
       {loading && <Loading />}
       <Header />
       <Routes>
-        <Route path="/" element={<Home loadingComplete={loadingComplete} />} />
         <Route
-          path="/sledz-kawe"
-          element={<TraceabilityChain loadingComplete={loadingComplete} />}
+          path="/"
+          element={<HomePage loadingComplete={loadingComplete} />}
         />
         <Route
           path="/o-projekcie"
-          element={<About loadingComplete={loadingComplete} />}
+          element={<AboutPage loadingComplete={loadingComplete} />}
         />
         <Route
           path="/kontakt"
-          element={<Contact loadingComplete={loadingComplete} />}
+          element={<ContactPage loadingComplete={loadingComplete} />}
         />
         <Route
           path="/partie/:batchId"
           element={
-            <BatchDetails
+            <BatchHistoryPage
+              loadingComplete={loadingComplete}
+              contract={contract}
+            />
+          }
+        />
+        <Route
+          path="/co-to-jest-blockchain"
+          element={
+            <BlockchainPage
               loadingComplete={loadingComplete}
               contract={contract}
             />

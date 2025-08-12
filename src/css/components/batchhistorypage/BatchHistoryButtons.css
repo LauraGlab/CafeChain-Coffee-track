@@ -1,0 +1,74 @@
+.batch-history-buttons {
+  -ms-overflow-style: none;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  overflow-x: auto;
+  position: relative;
+  scrollbar-width: none;
+  transition: all 0.2s ease;
+}
+
+.batch-history__btn-bg {
+  background-color: var(--brown-400);
+}
+
+.batch-history-buttons::-webkit-scrollbar {
+  display: none;
+}
+
+.batch-history-buttons.sticky {
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  left: 0;
+  padding: var(--space-sm) 2rem var(--space-md);
+  position: fixed;
+  right: 0;
+  top: calc(var(--space-main-section) - 1px);
+  z-index: 100;
+}
+
+.batch-history-buttons__button.active .cta {
+  background-color: var(--brown-200);
+}
+
+@media (max-width: 1023px) {
+  .batch-history-buttons {
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    scroll-snap-type: x mandatory;
+  }
+
+  .batch-history-buttons__button {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .batch-history-buttons.sticky {
+    padding: var(--space-2xl) 2rem var(--space-md);
+  }
+}
+
+@media (min-width: 1024px) {
+  .batch-history-buttons {
+    -webkit-overflow-scrolling: touch;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .batch-history-buttons__button {
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+  }
+
+  .batch-history-buttons.sticky {
+    padding: var(--space-lg) 2rem var(--space-md);
+  }
+}

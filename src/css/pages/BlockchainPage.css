@@ -1,0 +1,152 @@
+.blockchain-page {
+  background-color: var(--beige-100);
+  color: var(--white);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}
+
+.blockchain-page__intro {
+  background-color: var(--green-300);
+  border-top-left-radius: var(--radius-xl);
+  border-top-right-radius: var(--radius-xl);
+  color: var(--white);
+  margin-top: calc(-1 * var(--space-xl));
+  padding: var(--space-3xl) var(--space-xl);
+  text-align: center;
+}
+
+.blockchain-page__headline {
+  font-size: clamp(3rem, 4vw, 12rem);
+  line-height: var(--lh-vtight);
+  margin-bottom: var(--space-sm);
+}
+
+.blockchain-page__subheadline {
+  font-size: clamp(1.2rem, 4vw, 12rem);
+}
+
+.blockchain-page__block {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl) var(--space-md);
+  text-align: left;
+}
+
+.blockchain-page__img-wrapper {
+  transition: transform 0.3s ease;
+  width: 100%;
+}
+
+.blockchain-page__img-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.blockchain-page__img {
+  border-radius: var(--radius-lg);
+  max-height: 300px;
+  object-fit: contain;
+  width: 100%;
+}
+
+.blockchain-page__text-block {
+  padding: var(--space-md);
+}
+
+.blockchain-page__title {
+  margin-bottom: var(--space-sm);
+}
+
+.blockchain-page__paragraph {
+  margin: var(--space-xs) 0;
+}
+
+.blockchain-page__list {
+  margin: var(--space-xs) 0;
+}
+
+.blockchain-page__list-item {
+  font-size: var(--fs-sm);
+  margin-bottom: 0.3rem;
+}
+
+.cup {
+  background-color: var(--brown-300);
+}
+
+.cupDeco {
+  background-color: var(--brown-500);
+}
+
+.cupFill {
+  background-color: var(--brown-200);
+}
+
+.cupLid {
+  background-color: var(--brown-400);
+}
+
+@media (min-width: 768px) {
+  .blockchain-page__block {
+    align-items: center;
+    display: grid;
+    gap: var(--space-xl);
+    grid-template-columns: 1fr 1fr;
+    padding: var(--space-2xl) var(--space-xl);
+  }
+
+  .blockchain-page__block.reverse {
+    direction: rtl;
+  }
+
+  .blockchain-page__block.reverse > * {
+    direction: ltr;
+  }
+
+  .blockchain-page__img-wrapper {
+    height: 320px;
+    position: relative;
+  }
+
+  .blockchain-page__img {
+    height: 320px;
+    left: 50%;
+    max-height: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .blockchain-page__intro {
+    padding: var(--space-xl) var(--space-xl);
+  }
+
+  .blockchain-page__subheadline {
+    font-size: var(--fs-2xl);
+  }
+
+  .blockchain-page__text-block {
+    padding: var(--space-xl);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blockchain-page__block {
+    padding: var(--space-xs) var(--space-xl);
+  }
+
+  .blockchain-page__list-item,
+  .blockchain-page__paragraph {
+    font-size: 18px;
+  }
+
+  .blockchain-page__title {
+    font-size: var(--fs-3xl);
+  }
+}
+
+@media (min-width: 1200px) {
+  .blockchain-page__text-block {
+    padding: var(--space-xl) var(--space-2xl);
+  }
+}

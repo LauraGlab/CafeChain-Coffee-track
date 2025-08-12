@@ -1,0 +1,30 @@
+.contact-shortcut {
+  align-items: center;
+  background-image: url("./../../../assets/contactImgs/ContactImg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--beige-100);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 300px;
+  overflow: hidden;
+  padding: var(--space-3xl) var(--space-md);
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.contact-shortcut::before {
+  background-color: rgba(23, 41, 47, 0.5); 
+  content: "";
+  inset: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.contact-shortcut__title {
+  color: var(--beige-100);
+  margin-bottom: var(--space-lg);
+}

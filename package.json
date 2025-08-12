@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@shadcn/ui": "^0.0.4",
+    "emailjs-com": "^3.2.0",
     "ethers": "^6.1.0",
     "framer-motion": "^12.4.10",
     "html2canvas": "^1.4.1",
@@ -18,10 +19,12 @@
     "lucide-react": "^0.477.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-inlinesvg": "^4.1.7",
+    "react-hook-form": "^7.62.0",
+    "react-inlinesvg": "^4.2.0",
     "react-qr-code": "^2.0.15",
     "react-router-dom": "^7.1.1",
     "react-slick": "^0.30.3",
+    "swiper": "^11.2.10",
     "web3": "^4.16.0"
   },
   "devDependencies": {

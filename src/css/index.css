@@ -1,19 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
-*, :after, :before {
+:root {
+  --beige-100: #f9f5f2;
+  --beige-200: #f1e7df;
+  --beige-300: #ede2d9;
+  --beige-400: #d7c8bb;
+  --beige-500: #bfaea0;
+  --brown-100: #f3e6dd;
+  --brown-200: #bd8a67;
+  --brown-300: #965123;
+  --brown-400: #7a3e1a;
+  --brown-500: #38220F;
+  --brown-600: #23140A;
+  --gray-100: #e5e2df;
+  --gray-200: #bfb7af;
+  --gray-300: #918b82;
+  --gray-400: #57524b;
+  --green-100: #cfe1d1;
+  --green-200: #6b8d6d;
+  --green-300: #3d5940;
+  --orange-100: #f7ddb6;
+  --orange-200: #d98f3e;
+  --orange-300: #bb6f1d;
+  --black: #17292f;
+  --white: #ffffff;
+  --fs-base: clamp(1rem, 1.25vw, 1.125rem);
+  --fs-sm: clamp(0.875rem, 1vw, 1rem);
+  --fs-lg: clamp(1.125rem, 1.5vw, 1.25rem);
+  --fs-xl: clamp(1.25rem, 2vw, 1.5rem);
+  --fs-2xl: clamp(1.5rem, 3vw, 2rem);
+  --fs-3xl: clamp(2rem, 4vw, 3rem);
+  --fs-4xl: clamp(2.5rem, 6vw, 4rem);
+  --fs-5xl: clamp(3rem, 7vw, 6rem);
+  --fw-medium: 700;
+  --fw-bold: 900;
+  --lh-vtight: 1;
+  --lh-tight: 1.2;
+  --lh-base: 1.4;
+  --lh-relaxed: 1.6;
+  --lh-loose: 1.8;
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-cta: 9.375rem;
+  --space-xs: clamp(0.25rem, 0.5vw, 0.5rem);
+  --space-sm: clamp(0.5rem, 1vw, 1rem);
+  --space-sm2: clamp(0.75rem, 1.5vw, 1.25rem);
+  --space-md: clamp(1rem, 2vw, 2rem);
+  --space-lg: clamp(1.5rem, 3vw, 3rem);
+  --space-xl: clamp(2rem, 4vw, 4rem);
+  --space-2xl: clamp(3rem, 6vw, 6rem);
+  --space-3xl: clamp(4rem, 8vw, 8rem);
+  --space-section-gap: clamp(4rem, 10vw, 8rem);
+  --space-main-section: 17.037037037vw;
+  --z-header: 100;
+  --z-dropdown: 200;
+  --z-modal: 300;
+  --z-toast: 400;
+}
+
+*, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-
-:root {
-  --white: #FFFFFF;
-  --beige: #ede2d9;
-  --light-brown: #bd8a67;
-  --brown: #965123;
-  --dark-brown: #38220F;
-  --black: #17292f;
 }
 
 #root {
@@ -22,95 +75,191 @@
   min-height: 100vh;
 }
 
-body, html {
-  font-size: 4.2666666667vw;
-  font-weight: 700;
-  line-height: 100%;
-  margin: 0;
-  overflow-x: hidden;
-  padding: 0;
+html{
+  scroll-behavior: smooth;
 }
 
-body {
+html, body {
   background-color: var(--white);
-  color: var(--brown);
-  font-family: "Source Code Pro", serif;
+  color: var(--black);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: var(--fs-base);
   font-style: normal;
+  line-height: var(--lh-tight);
   margin: 0;
   overflow-x: hidden;
-  text-transform: uppercase;
   width: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: var(--fs-5xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-vtight);
+}
+
+h2 {
+  font-size: var(--fs-4xl);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+}
+
+h3 {
+  font-size: var(--fs-3xl);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-tight);
+}
+
+h4 {
+  font-size: var(--fs-2xl);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-base);
+}
+
+h5 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-base);
+}
+
+h6 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-medium);
+  line-height: var(--lh-base);
+}
+
+p {
+  font-size: var(--fs-lg);
+  line-height: var(--lh-relaxed);
+}
+
+li {
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}
+
+button, a {
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  transform: scaleX(1);
+  transition: box-shadow .6s, transform .6s, color 1s ease;
+  z-index: 0;
+}
+
+button:hover,
+button:focus {
+  outline: none;
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .app {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   position: relative;
 }
 
-a {
-  text-decoration: none;
+.section {
+  padding-top: var(--space-main-section);
+}
+
+.scroll-target {
+  scroll-margin-top: var(--space-main-section);
+}
+
+.section__decorated{
+  background-color: var(--white);
+  border-top-left-radius: var(--radius-xl);
+  border-top-right-radius: var(--radius-xl);
+  margin-top: calc(-1 * var(--space-xl));
+  padding-top: var(--space-xl);
+}
+
+.oswald{
+  font-family: "Oswald", sans-serif;
+  font-weight: var(--fw-bold);
+  line-height: 0.88;
   text-transform: uppercase;
 }
 
-button {
-  color: var(--brown);
-  font-family: "Source Code Pro", serif;
-  font-size: inherit;
-  font-weight: 700;
-  text-transform: uppercase;
+.scrolled {
+  box-shadow: rgba(0, 0, 0, 0.27) 0px 1px 10px 0px;
+  transition: all 1s ease-in;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+html.no-scroll,
+body.no-scroll {
+  overflow: hidden !important;
 }
 
-.fraunces {
-  font-family: "Fraunces", serif;
-  letter-spacing: -.11rem;
-  line-height: 80%;
-  text-transform: initial;
+@media only screen and (min-width: 480px) and (max-width: 740px) and (orientation: landscape) {
+  :root{
+    --space-main-section: 12.037037037vw;
+  }
 }
 
-/* CTA button */
-.instructionCta {
-  background-color: var(--dark-brown);
-  border: 1px solid var(--dark-brown);
-  border-radius: 9.375rem;
-  color: var(--white);
-  outline: none;
-  overflow: hidden;
-  padding: .6875rem 1.25rem .5625rem;
-  position: relative;
-  transition: all .2s ease-in;
-  text-transform: uppercase;
-  width: 100%;
+@media(min-width: 768px){
+  :root {
+    --space-main-section: 8.30078125vw;
+  }
 }
 
-.instructionCta a {
-  color: var(--white);
-}
-
-.instructionCta:hover {
-  background-color: var(--brown);
-  color: var(--dark-brown);
-}
-
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   body, html {
     font-size: 1.1111111111vw;
   }
-
-  .app {
-    justify-content: space-between;
-    min-height: 100vh;
+  
+  h1 {
+    font-size: var(--fs-4xl);
   }
 
-  .instructionCta {
-    font-size: 1.8rem;
-    margin: 4.5rem auto 0;
-    position: relative;
-    width: 18rem;
+  h2 {
+    font-size: var(--fs-3xl);
+  }
+
+  h3 {
+    font-size: var(--fs-2xl);
+  }
+
+  h4 {
+    font-size: var(--fs-xl);
+  }
+
+  h5 {
+    font-size: var(--fs-lg);
+  }
+
+  h6 {
+    font-size: var(--fs-base);
+  }
+
+  p {
+    font-size: var(--fs-base);
+  }
+}
+
+@media(min-width: 1200px){
+  :root {
+    --space-main-section: 100px;
   }
 }

@@ -1,0 +1,16 @@
+.contact {
+  background-color: var(--white);
+  color: var(--orange-300);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}
+
+@media(min-width: 768px){
+  .contact__form-wrapper{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+}

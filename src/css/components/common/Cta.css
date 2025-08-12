@@ -1,0 +1,36 @@
+.cta {
+  align-items: center;
+  background-color: var(--green-300);
+  border: none;
+  border-radius: var(--radius-cta);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--beige-100);
+  cursor: pointer;
+  display: flex;
+  font-family: "Oswald", sans-serif;
+  font-weight: var(--fw-bold);
+  height: 34px;
+  justify-content: center;
+  letter-spacing: 0.05cap;
+  padding: var(--space-sm) var(--space-md);
+  text-transform: uppercase;
+  transition: 
+    background-color 0.4s ease,
+    box-shadow 0.4s ease,
+    transform 0.25s ease;
+  transform: scale(1);
+  z-index: 0;
+}
+
+.cta:hover {
+  background-color: var(--green-200);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  color: var(--white);
+  transform: translateY(-2px) scale(1.02);
+}
+
+
+.cta-icon {
+  height: 20px;
+  margin-left: var(--space-xs);
+}
