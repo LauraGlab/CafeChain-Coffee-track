@@ -3,9 +3,9 @@ import BackToHome from "../components/common/BackToHome.jsx";
 import DecoratedSectionBlock from "../components/ui/DecoratedSectionBlock.jsx";
 import ContactForm from "../components/contactpage/ContactForm.jsx";
 import TitleSection from "../components/ui/TitleSection.jsx";
-import ContactImg from "./../assets/contactPageImgs/ContactPageImg.svg";
-import ContactImg1 from "./../assets/contactPageImgs/ContactPageImg1.svg";
-import ContactImg2 from "./../assets/contactPageImgs/ContactPageImg2.svg";
+import ContactImg from "./../assets/contactPageImgs/contactPageImg.svg";
+import ContactImg1 from "./../assets/contactPageImgs/contactPageImg1.svg";
+import ContactImg2 from "./../assets/contactPageImgs/contactPageImg2.svg";
 import "./../css/pages/ContactPage.css";
 
 export default function ContactPage({ loadingComplete }) {

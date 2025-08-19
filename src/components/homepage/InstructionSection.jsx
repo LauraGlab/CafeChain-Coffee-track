@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Cta from "../common/Cta.jsx";
-import instructionGif1 from "./../../assets/instructionGifs/instructionGif1.gif";
-import instructionGif2 from "./../../assets/instructionGifs/instructionGif2.gif";
-import instructionGif3 from "./../../assets/instructionGifs/instructionGif3.gif";
-import instructionGif4 from "./../../assets/instructionGifs/instructionGif4.gif";
+import instructionGif1 from "./../../assets/instructionGifs/InstructionGif1.gif";
+import instructionGif2 from "./../../assets/instructionGifs/InstructionGif2.gif";
+import instructionGif3 from "./../../assets/instructionGifs/InstructionGif3.gif";
+import instructionGif4 from "./../../assets/instructionGifs/InstructionGif4.gif";
 import "./../../css/components/homepage/InstructionSection.css";
 
 const steps = [

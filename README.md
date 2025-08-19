@@ -51,4 +51,3 @@ By leveraging **blockchain technology**, the system guarantees authenticity, pre
 - **QR Code Integration** – Unique identifiers for coffee tracking  
 
 ## License  
-This project is licensed under the **MIT License**.  
