@@ -9,6 +9,13 @@ import BatchHistoryStage from "./../components/batchhistorypage/BatchHistoryStag
 import TitleSection from "./../components/ui/TitleSection.jsx";
 import ContactShortcut from "./../components/layout/ContactShortcut.jsx";
 import AboutImg1 from "./../assets/batchImgs/batchHistoryImg.png";
+import stageImg1 from "./../assets/batchImgs/1.png";
+import stageImg2 from "./../assets/batchImgs/2.png";
+import stageImg3 from "./../assets/batchImgs/3.png";
+import stageImg4 from "./../assets/batchImgs/4.png";
+import stageImg5 from "./../assets/batchImgs/5.png";
+import stageImg6 from "./../assets/batchImgs/6.png";
+import stageImg7 from "./../assets/batchImgs/7.png";
 import "./../css/pages/BatchHistoryPage.css";
 
 export default function BatchHistoryPage({ contract, loadingComplete }) {
@@ -16,7 +23,15 @@ export default function BatchHistoryPage({ contract, loadingComplete }) {
   const [batchDetails, setBatchDetails] = useState([]);
 
   const [error, setError] = useState(null);
-  const stageImages = [];
+  const stageImages = [
+    stageImg1,
+    stageImg2,
+    stageImg3,
+    stageImg4,
+    stageImg5,
+    stageImg6,
+    stageImg7,
+  ];
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -26,11 +41,11 @@ export default function BatchHistoryPage({ contract, loadingComplete }) {
     const fetchBatchDetails = async () => {
       try {
         if (!contract) {
-          console.error("❌ Contract is not loaded yet!");
+          console.error("Contract is not loaded yet!");
           return;
         }
 
-        console.log(`🔹 Fetching batch data for batchId: ${batchId}`);
+        console.log(`Fetching batch data for batchId: ${batchId}`);
 
         const data = await contract.methods.getBatchStages(batchId).call();
 
@@ -39,10 +54,10 @@ export default function BatchHistoryPage({ contract, loadingComplete }) {
           index: Number(stage.index),
         }));
 
-        console.log("✅ Batch data: ", formattedData);
+        console.log("Batch data: ", formattedData);
         setBatchDetails(formattedData);
       } catch (error) {
-        console.error("❌ Error fetching data: ", error);
+        console.error("Error fetching data: ", error);
         setError("Error fetching data.");
       }
     };
@@ -66,12 +81,12 @@ export default function BatchHistoryPage({ contract, loadingComplete }) {
       <div className="batch-history__decorative-section"></div>
       <BatchHistoryButtons batchDetails={batchDetails} />
       <div className="batch-history-stage__wrapper">
-        {batchDetails.map((step) => (
+        {batchDetails.map((step, index) => (
           <BatchHistoryStage
             batchDetails={batchDetails}
             batchId={batchId}
             contractAddress={contractAddress}
-            step={step}
+            step={{ ...step, image: stageImages[index] }}
           />
         ))}
       </div>

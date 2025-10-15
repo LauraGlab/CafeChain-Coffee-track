@@ -1,7 +1,7 @@
 .error-page {
   align-items: center;
-  background-color: var(--beige-100);
-  color: var(--brown-600);
+  background-color: var(--brown-100);
+  color: var(--brown-500);
   display: flex;
   justify-content: center;
   min-height: 100vh;
@@ -30,16 +30,18 @@
 }
 
 .error-page__btn {
-  background-color: var(--brown-300);
-  border-radius: var(--radius-lg);
+  background-color: var(--brown-400);
+  border-radius: var(--radius-xl);
   color: var(--white);
   display: inline-block;
+  font-family: 'Oswald';
   font-weight: var(--fw-medium);
   padding: var(--space-sm) var(--space-md);
   text-decoration: none;
+  text-transform: uppercase;
   transition: background-color 0.2s ease-in-out;
 }
 
 .error-page__btn:hover {
-  background-color: var(--brown-400);
+  background-color: var(--brown-300);
 }

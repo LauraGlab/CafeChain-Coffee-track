@@ -1,8 +1,8 @@
 .menu {
   align-items: center;
-  background: var(--white);
+  background: linear-gradient(to bottom, var(--white) 0%, #f9f8f6 100%);
   border-top: 1px solid #ddd;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
   height: calc(100% - var(--space-main-section));
@@ -15,27 +15,32 @@
   top: var(--space-main-section);
   width: 100vw;
   z-index: var(--z-toast);
+  backdrop-filter: blur(6px);
+  transition: background 0.4s ease;
 }
 
 .menu__items {
   display: flex;
   flex-direction: column;
+  gap: var(--space-xs);
   max-width: 350px;
   width: 80%;
 }
 
 .menu__item {
-  background: var(--white);
-  border-bottom: 1px solid #eee;
-  border-radius: 8px;
+  background: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
   cursor: pointer;
   padding: calc(var(--space-sm2) * 1.2) 0;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   width: 100%;
 }
 
 .menu__item:hover {
-  border-bottom-color: var(--green-300);
+  background: var(--gold-bckgr);
+  border-bottom-color: var(--gold);
+  transform: translateX(4px);
 }
 
 .menu__item:last-child {
@@ -43,32 +48,37 @@
 }
 
 .menu__button {
-  align-items: self-start;
   background: none;
   border: none;
   color: var(--black);
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  font-size: var(--fs-base);
+  font-family: "Lato", sans-serif;
+  font-size: var(--fs-lg);
   font-weight: var(--fw-medium);
+  letter-spacing: 0.02em;
+  padding: 0 var(--space-sm);
+  text-align: left;
   transition: color 0.3s ease, transform 0.2s ease;
   width: 100%;
 }
 
 .menu__button:hover {
   color: var(--green-600);
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .menu__bottom-bar {
-  background-color: var(--green-300);
+  background: linear-gradient(to top, var(--green-300), var(--green-200));
+  border-top: 2px solid var(--green-400);
   bottom: 0;
   height: 20vh;
   left: 0;
   margin-top: auto;
   position: absolute;
   width: 100%;
+  border-radius: 16px 16px 0 0;
 }
 
 @media only screen and (min-width: 480px) and (max-width: 740px) and (orientation: landscape) {

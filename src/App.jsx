@@ -18,7 +18,6 @@ import ScrollToTop from "./components/ScrollToTop.jsx";
 import contractData from "./../artifacts/contracts/CoffeeTrack.sol/CoffeeTrack.json";
 import contractAddress from "./contractAddress.js";
 const contractABI = contractData.abi;
-import "./css/App.css";
 
 export default function App() {
   const [web3, setWeb3] = useState(null);
@@ -30,9 +29,9 @@ export default function App() {
   useEffect(() => {
     setLoading(true);
     setLoadingComplete(false);
+
     const loadPage = async () => {
-     
-      await new Promise((resolve) => setTimeout(resolve, 1500)); 
+      await new Promise((resolve) => setTimeout(resolve, 1500));
       setLoading(false);
       setLoadingComplete(true);
     };
@@ -46,21 +45,19 @@ export default function App() {
       "/sledz-kawe": "Śledź Kawę - CafeChain",
       "/o-projekcie": "O Projekcie - CafeChain",
       "/kontakt": "Kontakt - CafeChain",
+      "/co-to-jest-blockchain": "Co to jest Blockchain? - CafeChain",
     };
-
     document.title = titles[location.pathname] || "CafeChain";
   }, [location.pathname]);
 
   useEffect(() => {
     const initWeb3 = async () => {
       try {
-        console.log("🔹 Initializing Web3...");
-
+        console.log("🔗 Initializing Web3...");
         const infuraUrl = import.meta.env.VITE_INFURA_SEPOLIA_URL;
 
-        if (!infuraUrl) {
-          throw new Error("❌ Missing VITE_INFURA_SEPOLIA_URL in .env!");
-        }
+        if (!infuraUrl)
+          throw new Error("Missing VITE_INFURA_SEPOLIA_URL in .env!");
 
         const web3Instance = new Web3(infuraUrl);
         setWeb3(web3Instance);
@@ -80,10 +77,13 @@ export default function App() {
     initWeb3();
   }, []);
 
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <div className="app">
       <ScrollToTop />
-      {loading && <Loading />}
       <Header />
       <Routes>
         <Route

@@ -17,20 +17,23 @@ export default function Footer() {
           <img src={Logo} alt="Logo" className="footer__logo" />
         </Link>
         <nav className="footer__menu">
-          <Link className="footer__link" to="/sledz-kawe">
-            Śledź kawę
-          </Link>
-          <Link className="footer__link" to="/o-projekcie">
-            O projekcie
-          </Link>
-          <Link className="footer__link" to="/kontakt">
-            Kontakt
-          </Link>
+          {footerLinks.map((footerLink) => (
+            <Link
+              key={footerLink.to}
+              className="footer__link"
+              to={footerLink.to}
+            >
+              {footerLink.label}
+            </Link>
+          ))}
         </nav>
       </div>
       <div className="footer__rights">
         <p className="footer__copyright">©2025 Wszelkie prawa zastrzeżone.</p>
-        <p className="footer__author">Projekt & Kod: Laura Głąb</p>
+        <p className="footer__author">
+          Projekt & Kod:{" "}
+          <a href="https://laura-glab.vercel.app/#">Laura Głąb</a>
+        </p>
       </div>
     </footer>
   );

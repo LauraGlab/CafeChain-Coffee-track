@@ -1,18 +1,21 @@
 .batch-history-buttons {
   -ms-overflow-style: none;
   align-items: center;
+  background-color: var(--green-100);
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
   overflow-x: auto;
+  padding-bottom: var(--space-md);
   position: relative;
   scrollbar-width: none;
   transition: all 0.2s ease;
+  z-index: 99;
 }
 
 .batch-history__btn-bg {
-  background-color: var(--brown-400);
+  background-color: var(--green-300);
 }
 
 .batch-history-buttons::-webkit-scrollbar {
@@ -31,13 +34,19 @@
 }
 
 .batch-history-buttons__button.active .cta {
-  background-color: var(--brown-200);
+  background-color: var(--green-200);
+}
+
+.batch-history-buttons::after {
+  content: "";
+  flex: 0 0 var(--space-xl);
 }
 
 @media (max-width: 1023px) {
   .batch-history-buttons {
     -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap;
+    justify-content: flex-start;
     scroll-snap-type: x mandatory;
   }
 
@@ -58,7 +67,7 @@
     -webkit-overflow-scrolling: touch;
     flex-wrap: nowrap;
     gap: 1rem;
-    justify-content: flex-start;
+    justify-content: flex-start; 
     overflow-x: auto;
     scroll-snap-type: x mandatory;
   }

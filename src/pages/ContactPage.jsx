@@ -3,7 +3,7 @@ import BackToHome from "../components/common/BackToHome.jsx";
 import DecoratedSectionBlock from "../components/ui/DecoratedSectionBlock.jsx";
 import ContactForm from "../components/contactpage/ContactForm.jsx";
 import TitleSection from "../components/ui/TitleSection.jsx";
-import ContactImg from "./../assets/contactPageImgs/contactPageImg.svg";
+import ContactImg from "./../assets/contactPageImgs/contactPageImg.png";
 import ContactImg1 from "./../assets/contactPageImgs/contactPageImg1.svg";
 import ContactImg2 from "./../assets/contactPageImgs/contactPageImg2.svg";
 import "./../css/pages/ContactPage.css";
@@ -32,7 +32,7 @@ export default function ContactPage({ loadingComplete }) {
         reverse
         imageSrc={ContactImg1}
       />
-      <DecoratedSectionBlock imageSrc={ContactImg2} background="brown">
+      <DecoratedSectionBlock imageSrc={ContactImg2} background="orange">
         <ContactForm />
       </DecoratedSectionBlock>
     </motion.div>

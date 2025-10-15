@@ -9,18 +9,22 @@ export default function Hero({ loadingComplete }) {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.15,
-        delayChildren: 0.3,
+        staggerChildren: 0.08,
+        delayChildren: 0.1,
       },
     },
   };
 
   const fadeUp = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20, filter: "blur(4px)" },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
+      filter: "blur(0px)",
+      transition: {
+        duration: 0.45,
+        ease: [0.25, 0.1, 0.25, 1],
+      },
     },
   };
 
@@ -55,10 +59,12 @@ export default function Hero({ loadingComplete }) {
                 <span className="hero__title-accent">Kawę</span>
               </h1>
             </motion.div>
+
             <motion.p className="hero__description" variants={fadeUp}>
               CafeChain – transparentna podróż kawy od plantacji po filiżankę
               dzięki technologii blockchain.
             </motion.p>
+
             <motion.div variants={fadeUp}>
               <Cta
                 text="Zobacz jak to działa!"
@@ -69,19 +75,33 @@ export default function Hero({ loadingComplete }) {
           </motion.div>
           <motion.div
             className="hero__image-wrapper"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={loadingComplete ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
+            initial={{ opacity: 0, scale: 0.92, y: 20 }}
+            animate={
+              loadingComplete
+                ? { opacity: 1, scale: 1, y: 0 }
+                : { opacity: 0, scale: 0.92 }
+            }
+            transition={{
+              duration: 0.7,
+              ease: [0.16, 1, 0.3, 1],
+              delay: 0.3,
+            }}
           >
             <img
               className="hero__image-mobile"
               src={HeroImg}
               alt="zdjęcie filiżanki kawy"
+              width="450"
+              height="400"
+              loading="eager"
             />
             <img
               className="hero__image-desktop"
               src={HeroImg1}
               alt="zdjęcie filiżanki kawy"
+              width="800"
+              height="700"
+              loading="eager"
             />
           </motion.div>
         </div>

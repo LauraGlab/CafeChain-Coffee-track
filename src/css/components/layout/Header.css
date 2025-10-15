@@ -142,6 +142,20 @@
 }
 
 @media(min-width: 768px) {
+  .header.hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .header.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: all 0.4s ease-in-out;
+  }
+
   .header__container {
     gap: 0px;
     justify-content: space-between;
@@ -189,8 +203,8 @@
   }
 
   .header__menu-item {
-    color: var(--green-300);
     font-size: var(--fs-sm);
+    font-weight: 500;
     margin-right: var(--space-md);
     transition: color 1s ease;
   }

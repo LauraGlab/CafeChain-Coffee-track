@@ -1,4 +1,3 @@
-import ContactShortcut from "../components/layout/ContactShortcut.jsx";
 import Cta from "../components/common/Cta.jsx";
 import DecoratedSectionBlock from "../components/ui/DecoratedSectionBlock.jsx";
 import TitleSection from "../components/ui/TitleSection.jsx";
@@ -38,13 +37,8 @@ export default function AboutPage({ loadingComplete }) {
       <TitleSection titleSection="O Projekcie" titleImg={AboutImg1} />
       <DecoratedSectionBlock
         title="Co to jest?"
-        content="CafeChain to innowacyjny projekt, który wykorzystuje technologię
-            blockchain do przejrzystego śledzenia drogi kawy — od plantacji aż
-            do Twojej filiżanki. Dzięki temu masz pewność, skąd pochodzi Twoja
-            kawa i kto brał udział w jej produkcji. Większość dostępnych
-            systemów śledzenia działa w zamkniętych środowiskach. CafeChain
-            stawia na otwartość, wiarygodność i zaufanie – dane są publiczne,
-            odporne na manipulacje i dostępne dla każdego."
+        content="Projekt CafeChain powstał jako część mojej pracy magisterskiej i stanowi próbę połączenia nowoczesnych technologii z pasją do kawy. Jego głównym celem jest zbadanie oraz praktyczne wdrożenie możliwości technologii blockchain w branży kawowej: tak, aby zapewnić pełną przejrzystość i zaufanie w całym łańcuchu dostaw, od plantacji aż po filiżankę w rękach konsumenta.
+Dzięki zastosowaniu inteligentnych kontraktów i zdecentralizowanych rejestrów, CafeChain umożliwia śledzenie każdego etapu produkcji i dystrybucji kawy, gwarantując autentyczność pochodzenia, etyczne praktyki oraz wysoką jakość produktu."
         first
         imageSrc={AboutImgDesktop}
         reverse
@@ -89,7 +83,7 @@ export default function AboutPage({ loadingComplete }) {
       <DecoratedSectionBlock
         title="Dlaczego CafeChain jest wyjątkowy?"
         imageSrc={AboutImg4}
-        background="green"
+        background="brown"
         classNameText="text__highlighted"
       >
         <p className="section-block__text-subtitle">
@@ -103,7 +97,6 @@ export default function AboutPage({ loadingComplete }) {
           <strong>Czy jesteś gotowy, aby poznać historię swojej kawy?</strong>
         </p>
       </DecoratedSectionBlock>
-      <ContactShortcut />
     </div>
   );
 }

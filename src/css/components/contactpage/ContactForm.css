@@ -14,7 +14,6 @@
   color: var(--beige-100);
   display: flex;
   flex-direction: column;
-  font-size: var(--fs-sm);
   margin-top: var(--space-sm);
   width: 100%;
 }
@@ -44,7 +43,7 @@
 }
 
 .contact-form .error-message {
-  color: var(--orange-300);
+  color: var(--white);
   display: block;
   font-size: var(--fs-sm);
   margin-top: var(--space-xs);
@@ -58,7 +57,7 @@
 }
 
 .contact-form button {
-  background-color: var(--orange-300);
+  background-color: var(--orange-200);
   border: none;
   border-radius: var(--radius-md);
   color: var(--white);
@@ -80,7 +79,7 @@
 }
 
 .contact-form p {
-  color: var(--green-300);
+  color: var(--white);
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
   margin-top: var(--space-sm);

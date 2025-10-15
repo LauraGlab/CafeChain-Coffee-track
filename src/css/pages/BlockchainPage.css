@@ -6,7 +6,7 @@
 }
 
 .blockchain-page__intro {
-  background-color: var(--green-300);
+  background-color: var(--orange-300);
   border-top-left-radius: var(--radius-xl);
   border-top-right-radius: var(--radius-xl);
   color: var(--white);
@@ -53,10 +53,6 @@
   padding: var(--space-md);
 }
 
-.blockchain-page__title {
-  margin-bottom: var(--space-sm);
-}
-
 .blockchain-page__paragraph {
   margin: var(--space-xs) 0;
 }
@@ -70,23 +66,27 @@
   margin-bottom: 0.3rem;
 }
 
+.cupFill {
+  background-color: var(--brown-400);
+}
+
 .cup {
+  background-color: var(--green-300);
+}
+
+.cupLid {
   background-color: var(--brown-300);
 }
 
 .cupDeco {
-  background-color: var(--brown-500);
-}
-
-.cupFill {
-  background-color: var(--brown-200);
-}
-
-.cupLid {
-  background-color: var(--brown-400);
+  background-color: var(--orange-200);
 }
 
 @media (min-width: 768px) {
+  .blockchain-page__headline {
+    font-size: clamp(3rem, 6vw, 12rem);
+  }
+
   .blockchain-page__block {
     align-items: center;
     display: grid;
@@ -118,7 +118,7 @@
   }
 
   .blockchain-page__intro {
-    padding: var(--space-xl) var(--space-xl);
+    padding: var(--space-lg) var(--space-xl);
   }
 
   .blockchain-page__subheadline {

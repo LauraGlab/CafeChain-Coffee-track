@@ -39,6 +39,8 @@ export default function Header() {
           <button
             className={`hamburger ${isMenuOpen ? "open" : ""}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? "Zamknij menu" : "Otwórz menu"}
+            aria-expanded={isMenuOpen}
           >
             <span></span>
             <span></span>
@@ -46,14 +48,23 @@ export default function Header() {
           </button>
         </div>
         <div className="header__logo">
-          <Link to="/" onClick={() => setIsMenuOpen(false)}>
+          <Link
+            to="/"
+            onClick={() => setIsMenuOpen(false)}
+            aria-label="Strona główna – CafeChain"
+          >
             <img src={Logo} alt="CafeChain logo" />
             <h1 className="header__logo-title oswald">CafeChain</h1>
           </Link>
         </div>
         <div className="header__menu">
           {menuItems.map(({ name, path }, index) => (
-            <Link key={index} className="header__menu-item" to={path}>
+            <Link
+              key={index}
+              className="header__menu-item"
+              to={path}
+              title={name}
+            >
               {name}
             </Link>
           ))}
@@ -63,9 +74,10 @@ export default function Header() {
             className="header__qr-link"
             to="/partie/1"
             onClick={() => setIsMenuOpen(false)}
+            aria-label="Śledź kawę – przejdź do śledzenia partii"
           >
             <p className="oswald">Śledź kawę</p>
-            <SVG className="header__qr-icon" alt="" src={Package} />
+            <SVG className="header__qr-icon" aria-hidden="true" src={Package} />
           </Link>
         </div>
       </div>

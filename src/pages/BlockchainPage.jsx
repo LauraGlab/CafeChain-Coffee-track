@@ -22,9 +22,9 @@ const cupParts = [
           . Co konkretnie?
         </p>
         <ul className="blockchain-page__list">
-          <li className="blockchain-page__list-item">☕ Pochodzenie ziaren</li>
-          <li className="blockchain-page__list-item">⚙️ Metoda obróbki</li>
-          <li className="blockchain-page__list-item">🌱 Data zbiorów</li>
+          <li className="blockchain-page__list-item">- Pochodzenie ziaren</li>
+          <li className="blockchain-page__list-item">- Metoda obróbki</li>
+          <li className="blockchain-page__list-item">- Data zbiorów</li>
         </ul>
         <p className="blockchain-page__paragraph">
           To wszystko trafia do{" "}
@@ -45,8 +45,7 @@ const cupParts = [
       <p className="blockchain-page__paragraph">
         Kubek to jak{" "}
         <strong className="blockchain-page__strong">pojemnik na dane</strong>.
-        Nie rozleje się, nic nie zginie. W blockchainie pełni taką samą funkcję
-        –{" "}
+        Nie rozleje się, nic nie zginie. W blockchainie pełni taką samą funkcję:{" "}
         <strong className="blockchain-page__strong">
           przechowuje dane w bezpieczny sposób
         </strong>
@@ -70,10 +69,10 @@ const cupParts = [
         </p>
         <ul className="blockchain-page__list">
           <li className="blockchain-page__list-item">
-            🔐 Nie można niczego dopisać
+            - Nie można niczego dopisać
           </li>
           <li className="blockchain-page__list-item">
-            🧾 Wszystko jest podpisane i potwierdzone
+            - Wszystko jest podpisane i potwierdzone
           </li>
         </ul>
       </>
@@ -93,10 +92,10 @@ const cupParts = [
         </p>
         <ul className="blockchain-page__list">
           <li className="blockchain-page__list-item">
-            🧬 „Tak, te dane są autentyczne”
+            - „Tak, te dane są autentyczne”
           </li>
           <li className="blockchain-page__list-item">
-            🔗 „Ten blok łączy się z poprzednim”
+            - „Ten blok łączy się z poprzednim”
           </li>
         </ul>
         <p className="blockchain-page__paragraph">
@@ -114,22 +113,15 @@ function CupSection({ id, title, description, image, alt, index, loadingComplete
   const isReversed = index % 2 === 1;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      animate={loadingComplete ? "visible" : "hidden"}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`blockchain-page__block ${id} ${isReversed ? "reverse" : ""}`}
-    >
+    <div className={`blockchain-page__block ${id} ${isReversed ? "reverse" : ""}`}>
       <div className="blockchain-page__img-wrapper">
         <img className="blockchain-page__img" src={image} alt={alt} />
       </div>
       <div className="blockchain-page__text-block">
-        <h2 className="blockchain-page__title oswald">{title}</h2>
+        <h2 className="blockchain-page__title">{title}</h2>
         <div className="blockchain-page__description">{description}</div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

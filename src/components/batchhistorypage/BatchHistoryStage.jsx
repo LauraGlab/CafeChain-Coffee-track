@@ -6,8 +6,7 @@ import batchIcon5 from "./../../assets/batchIcons/batchIcon5.svg";
 import batchIcon6 from "./../../assets/batchIcons/batchIcon6.svg";
 import "./../../css/components/batchhistorypage/BatchHistoryStage.css";
 
-export default function BatchHistoryStage({step}) {
-
+export default function BatchHistoryStage({ step }) {
   const infoFields = [
     {
       key: "date",
@@ -49,36 +48,41 @@ export default function BatchHistoryStage({step}) {
 
   return (
     <section className="batch-history-stage" id={`stage-${step.index}`}>
-      <div className="batch-history-stage__progress">
-        <div className="batch-history-stage__stage">
-          <h3 className="batch-history-stage__stage-number oswald">
-            Etap {step.index + 1}
-          </h3>
-        </div>
-        <div className="batch-history-stage__line"></div>
-      </div>
-
       <div className="batch-history-stage__content">
-        <div className="batch-history-stage__info">
-          <h4 className="batch-history-stage__title">{step.stage}</h4>
-
-          {infoFields.map(({ key, icon, alt, className }) =>
-            step[key] ? (
-              <div className="batch-history-stage__info-row" key={key}>
-                <img
-                  src={icon}
-                  className="batch-history-stage__info-icon"
-                  alt={alt}
-                />
-                <p className={className}>{step[key]}</p>
-              </div>
-            ) : null
+        <div className="batch-history-stage__inner">
+          {step.image && (
+            <div className="batch-history-stage__image-wrapper">
+              <img
+                src={step.image}
+                alt={`Etap ${step.index + 1}`}
+                className="batch-history-stage__image"
+              />
+            </div>
           )}
-        </div>
+          <div className="batch-history-stage__info-wrapper">
+            <div>
+              <h4 className="batch-history-stage__title">{step.stage}</h4>
+              <div className="batch-history-stage__info">
+                {infoFields.map(({ key, icon, alt, className }) =>
+                  step[key] ? (
+                    <div className="batch-history-stage__info-row" key={key}>
+                      <img
+                        src={icon}
+                        className="batch-history-stage__info-icon"
+                        alt={alt}
+                      />
+                      <p className={className}>{step[key]}</p>
+                    </div>
+                  ) : null
+                )}
+              </div>
+            </div>
 
-        <div className="batch-history-stage__description">
-          <div className="batch-history-stage__text">
-            <p>{step.details}</p>
+            <div className="batch-history-stage__description">
+              <div className="batch-history-stage__text">
+                <p>{step.details}</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

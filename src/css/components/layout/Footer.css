@@ -19,6 +19,7 @@
 }
 
 .footer__logo {
+  width: 160px;
   height: 45px;
   object-fit: contain;
 }
@@ -37,7 +38,7 @@
 }
 
 .footer__link:hover {
-  color: var(--brown-300);
+  color: var(--beige-200);
   transform: translateY(-2px);
 }
 

@@ -1,182 +1,160 @@
 .batch-history-stage {
-  background-color: var(--beige-100);
-  border-radius: var(--radius-xl);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+  align-items: flex-start;
   display: flex;
-  gap: var(--space-sm);
-  margin: var(--space-xl) var(--space-md);
-  padding: var(--space-lg);
+  padding-left: var(--space-lg);
+  padding-right: var(--space-lg);
   position: relative;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.6s ease;
+  width: 100%;
 }
 
-.batch-history-stage__progress {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-  position: relative;
-  width: 40px;
-}
-
-.batch-history-stage__stage-number {
-  color: var(--brown-200);
-  font-size: var(--fs-xl);
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  margin-bottom: var(--space-xs);
-  text-transform: uppercase;
-}
-
-.batch-history-stage__line {
-  background-color: var(--brown-200);
-  border-radius: 2px;
-  flex: 1;
+.batch-history-stage::before {
+  background-color: var(--green-300);
+  content: "";
+  height: 100%;
+  left: 10px;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
   width: 3px;
+  z-index: 0;
+}
+
+.batch-history-stage:first-child::before {
+  top: var(--space-md);
+}
+
+.batch-history-stage::after {
+  background-color: var(--green-300);
+  border: 3px solid var(--green-300);
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0,0,0,0.15);
+  content: "";
+  height: 14px;
+  left: 10px;
+  position: absolute;
+  top: var(--space-md);
+  transform: translate(-50%, -50%);
+  width: 14px;
+  z-index: 2;
 }
 
 .batch-history-stage__content {
   background: var(--white);
   border-radius: var(--radius-lg);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  margin: var(--space-md) 0;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  z-index: 1;
+}
+
+.batch-history-stage__content:hover {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.batch-history-stage__inner {
+  display: flex;
+}
+
+.batch-history-stage__image-wrapper {
+  align-items: stretch;
+  border-bottom-left-radius: var(--radius-lg);
+  border-top-left-radius: var(--radius-lg);
+  display: flex;
+  flex: 0 0 500px;
+  height: auto;
+  overflow: hidden;
+}
+
+.batch-history-stage__image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.batch-history-stage__info-wrapper {
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: var(--space-lg);
+  justify-content: center;
+  padding: var(--space-md) var(--space-lg);
 }
 
 .batch-history-stage__title {
-  color: var(--brown-500);
-  font-size: var(--fs-lg);
-  font-weight: var(--fw-medium);
-  margin-bottom: var(--space-xs);
-}
-
-.batch-history-stage__info {
-  display: grid;
-  gap: var(--space-sm);
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
 }
 
 .batch-history-stage__info-row {
   align-items: center;
-  color: var(--gray-400);
   display: flex;
   font-size: var(--fs-sm);
   gap: var(--space-xs);
-  line-height: var(--lh-base);
 }
 
 .batch-history-stage__info-icon {
-  flex-shrink: 0;
   height: 16px;
-  opacity: 0.7;
+  opacity: 0.8;
   width: 16px;
 }
 
 .batch-history-stage__description {
-  align-items: flex-start;
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-  justify-content: space-between;
-}
-
-.batch-history-stage__image {
-  border-radius: var(--radius-md);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  flex-shrink: 0;
-  height: auto;
-  object-fit: cover;
-  width: 140px;
-}
-
-.batch-history-stage__text {
-  color: var(--gray-400);
-  flex: 1;
   font-size: var(--fs-sm);
   line-height: var(--lh-relaxed);
-  min-width: 200px;
-}
-
-.batch-history-stage__etherscan-link {
-  align-self: flex-start;
-  color: var(--green-300);
-  font-size: var(--fs-sm);
   margin-top: var(--space-sm);
-  text-decoration: underline;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 480px){
+  .batch-history-stage__info {
+    display: grid;
+    gap: var(--space-xs);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
   .batch-history-stage {
-    flex-direction: column;
+    justify-content: center;
+    padding-right: var(--space-md);
   }
 
-  .batch-history-stage__description {
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
+  .batch-history-stage::before {
+    left: 15px;
   }
 
-  .batch-history-stage__image {
-    max-width: 280px;
+  .batch-history-stage::after {
+    left: 15px;
+  }
+
+  .batch-history-stage__content {
+    padding: var(--space-lg);
+    width: 95%;
+  }
+
+  .batch-history-stage__inner{
+    display: block;
+  }
+
+  .batch-history-stage__image-wrapper{
+    display: none;
+  }
+
+  .batch-history-stage__info-wrapper {
+    padding: 0;
     width: 100%;
   }
 
-  .batch-history-stage__text {
-    margin-top: var(--space-sm);
-    text-align: left;
-  }
-
-  .batch-history-stage__info {
-    grid-template-columns: 1fr;
-  }
-
-  .batch-history-stage__progress {
-    flex-direction: row;
-    justify-content: start;
+  .batch-history-stage__info-row{
     margin-bottom: var(--space-sm);
-    width: auto;
   }
 
-  .batch-history-stage__line {
-    display: none;
-  }
-}
-
-@media (max-width: 480px) {
-  .batch-history-stage__content {
-    padding: var(--space-md);
-  }
-
-  .batch-history-stage__info-icon {
-    height: 14px;
-    width: 14px;
-  }
-}
-
-@media (min-width: 768px) {
-  .batch-history-stage {
-    margin: var(--space-md);
-  }
-}
-
-@media (min-width: 1024px) {
-  .batch-history-stage {
-    gap: var(--space-lg);
-  }
-
-  .batch-history-stage__stage-number {
-    font-size: var(--fs-2xl);
-    line-height: 1.2;
-    text-align: center;
-  }
-
-  .batch-history-stage__title {
-    font-size: var(--fs-xl);
-  }
-
-  .batch-history-stage__content {
-    gap: var(--space-sm);
+  .batch-history-stage__info-row p{
+    line-height: var(--lh-tight);
   }
 }
